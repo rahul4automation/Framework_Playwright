@@ -20,6 +20,15 @@ Feature: Test Best Buy Landing Page
             | Top Deals       |
             | Deal of the Day |
             | Credit Cards    |
-            | Best Buy Outlet |
+
+
+    Scenario: To verify drop down more options
+        Given I launch Best buy landing page
+        Then User able to Validate "Recently Viewed" button
+        Then Verify the below texts are displayed on more dropdown options
+            | Gift Ideas |
+
+
+
 
 
