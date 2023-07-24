@@ -4,7 +4,7 @@ Feature: Test Best Buy Landing Page
 
         Given I launch Best buy landing page
         Then User able to Validate "Recently Viewed" button
-        Then Verify the below texts are displayed on shop page
+        And Verify the below texts are displayed on shop page
             | Account      |
             | More         |
             | Saved Items  |
@@ -16,8 +16,10 @@ Feature: Test Best Buy Landing Page
 
         Given I launch Best buy landing page
         Then User able to Validate "Recently Viewed" button
-        Then Verify the below texts are displayed on deal page
+        And Verify the below texts are displayed on deal page
             | Top Deals       |
             | Deal of the Day |
+            |Credit Cards |
+            |Best Buy Outlet|
 
 
