@@ -1,0 +1,21 @@
+{
+  "name": "cucumber_playwright_framework",
+  "version": "0.0.1",
+  "description": "BDD framewrok using playeright automation tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js feature/login.feature"
+  },
+  "author": "Rahul Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^9.3.0",
+    "@cucumber/pretty-formatter": "^1.0.0",
+    "chai": "^4.3.7",
+    "playwright": "^1.36.1",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.5"
+  }
+}
