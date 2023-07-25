@@ -41,13 +41,13 @@ Then('Verify the below texts are displayed on deal page', async (dataTable: Data
 When('User click on MoreButton to validate All the opptions' ,async() =>
 {    
      await global.page.waitForTimeout(1000);
-      await landingpage.clickOnMoreButton;
+      await landingpage.clickOnMoreButton();
 });
 
 
 Then('Verify the below texts are displayed on more dropdown options', async (moreDataTable: DataTable) => {
     const optiondata = moreDataTable.raw();
-
+    console.log("value is :",optiondata);
     for (let index = 0; index < optiondata.length; index++) {
         const element = optiondata[index][0];
         await landingpage.verifyVisiblityofMoreDropDownOptions(element);

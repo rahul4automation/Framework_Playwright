@@ -1,5 +1,6 @@
 Feature: Test Best Buy Landing Page
 
+     
     Scenario:To Launch Best Buy Application and verify text on Shop page
 
         Given I launch Best buy landing page
@@ -12,21 +13,26 @@ Feature: Test Best Buy Landing Page
 
 
 
-    Scenario: To Launch Best Buy Application and verify the text on Deal page
+     Scenario: To Launch Best Buy Application and verify the text on Deal page
 
-        Given I launch Best buy landing page
-        Then User able to Validate "Recently Viewed" button
-        And Verify the below texts are displayed on deal page
-            | Top Deals       |
-            | Deal of the Day |
-            | Credit Cards    |
+         Given I launch Best buy landing page
+         Then User able to Validate "Recently Viewed" button
+         And Verify the below texts are displayed on deal page
+             | Top Deals       |
+             | Deal of the Day |
+             | Credit Cards    |
 
 
     Scenario: To verify drop down more options
         Given I launch Best buy landing page
         Then User able to Validate "Recently Viewed" button
+        When User click on MoreButton to validate All the opptions
         Then Verify the below texts are displayed on more dropdown options
             | Gift Ideas |
+            |Best Buy Business|
+            |Health & Wellness|
+           
+
 
 
 

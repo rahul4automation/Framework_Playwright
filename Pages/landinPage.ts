@@ -4,9 +4,8 @@ export class LandingPage {
     public pageObjects = {
         AccountButton: (option: string) => `//span[contains(text(),'${option}')]`,
         DealPageText: (option: string) => `//a[contains(text(),'${option}')]`,
-        MoreButtonDropDown:`//span[contains(text(),'More')]/..`,
+        MoreButtonDropDown:`//button//span[contains(text(),'More')]`,
         DropDownOptions:(option: string) => `//ul[@class='utility-nav-drawer-flyout-list']//a[contains(text(),'${option}')]`,
-    
 
 
     }
@@ -39,8 +38,6 @@ export class LandingPage {
 
 
     public async verifyVisiblityofMoreDropDownOptions(text: string) {
-        await global.page.locator(this.pageObjects.MoreButtonDropDown).click();
-        await global.page.waitForTimeout(5000);
         const isDisplayed = await global.page.locator(this.pageObjects.DropDownOptions(text)).isVisible();
         await global.page.waitForTimeout(5000);
         expect(isDisplayed).to.equals(true);
