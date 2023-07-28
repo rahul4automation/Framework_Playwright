@@ -6,6 +6,7 @@ export class LandingPage {
         DealPageText: (option: string) => `//a[contains(text(),'${option}')]`,
         MoreButtonDropDown:`//button//span[contains(text(),'More')]`,
         DropDownOptions:(option: string) => `//ul[@class='utility-nav-drawer-flyout-list']//a[contains(text(),'${option}')]`,
+        
 
 
     }
