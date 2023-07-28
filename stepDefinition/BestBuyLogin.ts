@@ -66,3 +66,9 @@ When('User able to click on {string} link and verify Credit {string} page', asyn
     await creditcardpage.verifBestBuyCard(verificationText);
     await page.screenshot({ path: 'screenshot.png', fullPage: true })
 });
+
+When('User able to verify SignIn Button and Login using {string} and {string} credit Card Page', async (username: string, password: string) => {
+    await global.page.waitForTimeout(1000);
+    await creditcardpage.signInToCreditCardPage(username, password);
+    await page.screenshot({ path: 'screenshot.png', fullPage: true })
+});
